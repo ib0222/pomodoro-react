@@ -40,7 +40,7 @@ function Timer() {
                 setIsWorking(true);
                 setSecondsLeft(settingsInfo.workMinutes * 60);
             }
-            setIsPaused(true);
+            setIsPaused(false);
         }
 
         return () => clearInterval(interval);
