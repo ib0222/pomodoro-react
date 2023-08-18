@@ -51,8 +51,8 @@ function Timer() {
     };
 
     const percentageComplete = isWorking
-        ? (1 - secondsLeft / (settingsInfo.workMinutes * 60)) * 100
-        : (1 - secondsLeft / (settingsInfo.breakMinutes * 60)) * 100;
+        ? (secondsLeft / (settingsInfo.workMinutes * 60)) * 100
+        : (secondsLeft / (settingsInfo.breakMinutes * 60)) * 100;
 
     return (
         <>
