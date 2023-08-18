@@ -5,11 +5,9 @@ import BackButton from "./BackButton";
 
 function Settings() {
   const settingsInfo = useContext(SettingsContext);
-
   const handleWorkMinutesChange = (newValue) => {
     settingsInfo.setWorkMinutes(newValue);
   };
-
   const handleBreakMinutesChange = (newValue) => {
     settingsInfo.setBreakMinutes(newValue);
   };
