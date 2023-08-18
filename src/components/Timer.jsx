@@ -6,6 +6,7 @@ import SettingsButton from './SettingsButton';
 import { useContext, useState, useEffect } from 'react';
 import SettingsContext from './SettingsContext';
 
+
 const red = '#f54e4e';
 const green = '#4aec8c';
 
@@ -40,7 +41,9 @@ function Timer() {
                 setIsWorking(true);
                 setSecondsLeft(settingsInfo.workMinutes * 60);
             }
-            setIsPaused(false);
+            settingsInfo.automatic ? setIsPaused(false) : setIsPaused(true);
+
+
         }
 
         return () => clearInterval(interval);
@@ -73,6 +76,7 @@ function Timer() {
             <div style={{ marginTop: '20px' }}>
                 <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
             </div>
+            
         </>
     );
 }

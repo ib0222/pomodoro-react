@@ -1,4 +1,5 @@
 import Slider from "@mui/material/Slider";
+import AutomationButton from "./AutomationButton";
 import { useContext } from "react";
 import SettingsContext from "./SettingsContext";
 import BackButton from "./BackButton";
@@ -11,7 +12,6 @@ function Settings() {
   const handleBreakMinutesChange = (newValue) => {
     settingsInfo.setBreakMinutes(newValue);
   };
-  
   return (
     <div style={{ textAlign: "left" }}>
       <label>Work minutes:{settingsInfo.workMinutes}</label>
@@ -37,8 +37,14 @@ function Settings() {
           color: "#b2102f",
         }}
       />
-      <div style={{textAlign:'center',marginTop:'20px'}}>
-        <BackButton onClick={() => settingsInfo.setShowSettings(false)}/>
+      <AutomationButton
+        onClick={() => {
+          console.log(settingsInfo.automatic)
+          settingsInfo.setAutomatic(!settingsInfo.automatic);
+        }}
+      />
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <BackButton onClick={() => settingsInfo.setShowSettings(false)} />
       </div>
     </div>
   );

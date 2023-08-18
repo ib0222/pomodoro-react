@@ -8,17 +8,20 @@ function App() {
   const [showSettings, setShowSettings] = useState(false);
   const [workMinutes, setWorkMinutes] = useState(45);
   const [breakMinutes, setBreakMinutes] = useState(15);
+  const [automatic,setAutomatic] = useState(false);
   return (
     <>
       <main>
-          <div style={{marginBottom:'40px',fontSize:'35px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:600}}>Pomodoro Timer</div>
+          <div style={{marginBottom:'20px',fontSize:'35px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:600}}>Pomodoro Timer</div>
           <SettingsContext.Provider value={{
             showSettings,
             setShowSettings,
             workMinutes,
             breakMinutes,
             setWorkMinutes,
-            setBreakMinutes
+            setBreakMinutes,
+            automatic,
+            setAutomatic
 
           }}>
           {showSettings ? <Settings /> : <Timer />}
