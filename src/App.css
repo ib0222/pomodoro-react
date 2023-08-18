@@ -1,0 +1,33 @@
+body {
+  background-color: #30384b;
+  color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  padding-top: 50px;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 0;
+  width: 100px;
+  display: inline-block;
+  cursor: pointer;
+}
+button.settings {
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  line-height: 36px;
+  & svg {
+    width: 36px;
+    float: left;
+    margin-right: 5px;
+  }
+}
