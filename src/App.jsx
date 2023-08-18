@@ -11,6 +11,7 @@ function App() {
   return (
     <>
       <main>
+          <div style={{marginBottom:'40px',fontSize:'35px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:600}}>Pomodoro Timer</div>
           <SettingsContext.Provider value={{
             showSettings,
             setShowSettings,
