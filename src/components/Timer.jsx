@@ -1,4 +1,4 @@
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar/dist/index'
 import 'react-circular-progressbar/dist/styles.css';
 import PlayButton from './PlayButton';
 import PauseButton from './PauseButton';
